@@ -9,11 +9,14 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/angular")
 </head>
-<body ng-app="uplandPestControl" ng-controller="appCtrl" class="{{backgroundImage}}" ng-cloak>
+<body ng-app="uplandPestControl" ng-controller="appCtrl">
+    <div class="diamond">
+        <div>Upland Pest</div>
+    </div>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <button type="button" class="navbar-toggle" style="margin-right: 30px;" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -22,23 +25,53 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#Benefits">Benefits</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#FAQ">FAQ</a></li>
+                    <li><a href="#Services">Services</a></li>
+                    <li><a href="#Contact">Contact</a></li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
     </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Upland Pest Control</p>
-        </footer>
+    <div id="Home" class="main-header bg-img-3" style="height: calc(100vh); width: 100%; background-size: cover; background-position: center; z-index: 0">
+        <div style="height: 100%; width: 100%; background: rgba(0,0,0,0.5)">
+        </div>
+    </div>
+    <div style="width: 100%; z-index: 1; position: relative; top:0; background: inherit" class="body">
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - Upland Pest Control</p>
+            </footer>
+        </div>
     </div>
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/siteJS")
     @RenderSection("scripts", required: false)
+    <script>
+        $(function () {
+            var offset = $(".navbar").offset().top;
+            function stickyNav() {
+                if ($(window).width() > 1205 && $(window).scrollTop() > offset) {
+                    $(".navbar").addClass("sticky");
+                }
+                else if ($(window).width() <= 1205) {
+                    $(".navbar").addClass("sticky");
+                }
+                else {
+                    $(".navbar").removeClass("sticky");
+                }
+            }
+            stickyNav();
+            $(window).on("scroll resize", function () {
+                stickyNav();
+            });
+            
+        });
+    </script>
 </body>
 </html>

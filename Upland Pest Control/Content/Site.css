@@ -1,14 +1,48 @@
 ﻿body {
-    padding-top: 50px;
     padding-bottom: 20px;
     font-size: 16px;
     font-weight: bold;
+}
+.body {
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position-x: center;
 }
-
+.navbar {
+    transition: width .3s;
+    background: transparent;
+    margin: 0 auto;
+    border: none;
+    position: absolute !important;
+    top: calc(60vh + 50px) !important;
+}
+    .navbar * {
+        color: whitesmoke !important;
+        font-size: 22px !important;
+        font-weight: bold !important;
+    }
+    .navbar .navbar-header {
+        margin-left: 12%;
+    }
+.navbar.sticky {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0;
+    transition: width .3s;
+    background: rgba(0,0,0,0.9);
+    width: calc(100vw);
+}
+    .navbar.sticky * {
+        font-size: 16px !important;
+    }
+    .navbar.sticky .diamond {
+        position: absolute;
+        top: -500px;
+    }
+    .navbar.sticky .navbar-header {
+        margin-left: 0;
+    }
 .bg-img-1 {
     background-image: url(Images/bg-img-1.jpg);
 }
@@ -41,7 +75,7 @@
 
     body {
         font-size: 14px;
-        font-weight: normal;
+        font-weight: bold;
     }
 
     /*.bg-img-1 {
@@ -88,3 +122,47 @@ textarea {
 .test-area {
     color: red;
 }
+.main-header {
+
+}
+
+.diamond {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    left: -45px;
+    top: calc(60vh + 50px);
+    margin: 0;
+    background: transparent;
+    border: 5px solid whitesmoke;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    -o-transform-origin: 0 100%;
+    transform-origin: -135% 0%;
+    margin: 0 50%;
+}
+    .diamond div {
+        left: -6%;
+        top: -18%;
+        position: relative;
+        font-size: 26px;
+        font-weight: bold;
+        color: whitesmoke;
+        text-align: center;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+        -webkit-transform-origin: 0 100%;
+        -moz-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+        -o-transform-origin: 0 100%;
+        transform-origin: 0 100%;
+    }

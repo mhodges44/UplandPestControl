@@ -188,6 +188,8 @@
     <Content Include="Content\Images\bg-img-3.jpg" />
     <Content Include="Content\Images\bg-img-2.jpg" />
     <Content Include="Content\Images\bg-img-4.jpg" />
+    <Content Include="Content\Images\pest-control-worker-28663642.jpg" />
+    <Content Include="Content\Images\PestControlMan.png" />
     <Content Include="Content\ui-bootstrap-csp.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
