@@ -184,12 +184,28 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\100guarantee.png" />
+    <Content Include="Content\Images\10PercentDiscount.png" />
+    <Content Include="Content\Images\1447842434_Brain-Games-grey.png" />
+    <Content Include="Content\Images\1447842486_time.png" />
+    <Content Include="Content\Images\1447842593_conference.png" />
+    <Content Include="Content\Images\1447842611_money_bag.png" />
+    <Content Include="Content\Images\1447842895_PCI cards.png" />
+    <Content Include="Content\Images\1447843916_decision.png" />
+    <Content Include="Content\Images\1447843950_test_tube.png" />
+    <Content Include="Content\Images\1447843998_watch.png" />
+    <Content Include="Content\Images\1447844060_self_distract_button.png" />
     <Content Include="Content\Images\bg-img-1.jpg" />
     <Content Include="Content\Images\bg-img-3.jpg" />
     <Content Include="Content\Images\bg-img-2.jpg" />
     <Content Include="Content\Images\bg-img-4.jpg" />
+    <Content Include="Content\Images\bug.png" />
+    <Content Include="Content\Images\home.png" />
+    <Content Include="Content\Images\Logo_150_150.png" />
+    <Content Include="Content\Images\Logo_75_50.png" />
     <Content Include="Content\Images\pest-control-worker-28663642.jpg" />
     <Content Include="Content\Images\PestControlMan.png" />
+    <Content Include="Content\Images\refund.jpg" />
     <Content Include="Content\ui-bootstrap-csp.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -237,8 +253,8 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\_About.cshtml" />
+    <Content Include="Views\Home\_Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
@@ -260,6 +276,9 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Home\_FAQ.cshtml" />
+    <Content Include="Views\Home\_Services.cshtml" />
+    <Content Include="Views\Home\_Benefits.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

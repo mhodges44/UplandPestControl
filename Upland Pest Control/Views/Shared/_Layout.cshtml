@@ -11,7 +11,7 @@
 </head>
 <body ng-app="uplandPestControl" ng-controller="appCtrl">
     <div class="diamond">
-        <div>Upland Pest</div>
+        <div><img src="~/Content/Images/Logo_150_150.png" /></div>
     </div>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
@@ -21,15 +21,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Upland Pest Control", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <a class="navbar-brand" href="/">Upland Pest Control</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="#Home">Home</a></li>
                     <li><a href="#Benefits">Benefits</a></li>
                     <li><a href="#About">About</a></li>
-                    <li><a href="#FAQ">FAQ</a></li>
                     <li><a href="#Services">Services</a></li>
+                    <li><a href="#FAQ">FAQ</a></li>
                     <li><a href="#Contact">Contact</a></li>
                 </ul>
                 @Html.Partial("_LoginPartial")
@@ -41,11 +41,12 @@
         </div>
     </div>
     <div style="width: 100%; z-index: 1; position: relative; top:0; background: inherit" class="body">
-        <div class="container body-content">
+        <div class="container body-content col-md-12">
             @RenderBody()
             <hr />
             <footer>
-                <p>&copy; @DateTime.Now.Year - Upland Pest Control</p>
+                @Html.Partial("_Contact")
+                <p style="clear:both;">&copy; @DateTime.Now.Year - Upland Pest Control</p>
             </footer>
         </div>
     </div>
@@ -70,7 +71,19 @@
             $(window).on("scroll resize", function () {
                 stickyNav();
             });
-            
+            var inputs = function (element) {
+                if (element.val() != "") {
+                    element.parent().addClass("show-label");
+                } else {
+                    element.parent().removeClass("show-label");
+                }
+            }
+            $.each($(".inline-label-input"), function () {
+                inputs($(this));
+            });
+            $(".inline-label-input").on("input propertychange change", function () {
+                inputs($(this));
+            });
         });
     </script>
 </body>

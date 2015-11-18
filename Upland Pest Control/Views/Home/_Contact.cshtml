@@ -1,0 +1,26 @@
+﻿<div id="Contact" style="width: 780px; max-width: 100%; margin: 0 auto;">
+    <h2>Contact Us!</h2>
+    <span>Need information or would you like to set up an appointment?</span>
+    <span>Tell us about your situation and some information on how to contact you and we will get you exactly what you need!</span>
+    <form name="ContactForm" class="contact-form">
+        <div style="float: left; margin-right: 50px; padding-bottom: 20px;">
+            <div class="inline-label-container">
+                <label class="inline-label">Your Name</label>
+                <input type="text" placeholder="Your Name" class="inline-label-input" ng-model="customerName">
+            </div>
+            <div class="inline-label-container">
+                <label class="inline-label">Email Address</label>
+                <input type="text" placeholder="Email Address" class="inline-label-input" ng-model="customerEmail">
+            </div>
+            <div class="inline-label-container">
+                <label class="inline-label">Phone Number</label>
+                <input type="text" placeholder="Phone Number" class="inline-label-input" ng-model="customerPhone">
+            </div>
+        </div>
+        <div style="float: left; margin-bottom: 20px;">
+            <textarea placeholder="Tell us about your situation..." style="min-height: 150px; width: 400px; max-width: calc(100vw - 25px); margin-right: 10px;" ng-model="additionalNotes"></textarea>
+            <br />
+            <button ng-click="sendEmail()">Send</button>
+        </div>
+    </form>
+</div>
