@@ -62,7 +62,7 @@
 }
 
 .container.body-content {
-    background-color: rgba(245,245,245, 0.75);
+    background-color: rgba(245,245,245, 1);
 }
 
 .jumbotron {
@@ -73,11 +73,6 @@
     .jumbotron {
         padding-left: 20px;
         padding-right: 20px;
-    }
-
-    body {
-        font-size: 14px;
-        font-weight: bold;
     }
 
     /*.bg-img-1 {
@@ -96,10 +91,6 @@
     .bg-img-4 {
         background-image: url(Images/bg-img-4.jpg);
     }*/
-
-    .container.body-content {
-        background-color: rgba(245,245,245, 0.6);
-    }
 }
 /* Set padding to keep content from hitting the edges */
 .body-content {
@@ -169,6 +160,11 @@ textarea {
         transform-origin: 0 100%;
     }
 
+@media screen and (max-width: 1024px){
+    .diamond {
+        top: calc(60vh + 150px);
+    }
+}
 .inline-label {
   color: #333;
   font-size: 12px;
@@ -256,6 +252,7 @@ form button:hover {
 }
 .about-description {
     text-align:center;
+    padding: 30px;
 }
 .about-description-header {
     font-weight: bold;
@@ -266,4 +263,163 @@ form button:hover {
     width: 100%; 
     margin: 0 auto;
     display: block;
+}
+
+.benefits-title {
+    font-weight: bolder; 
+    font-size: larger; 
+    display:block;
+}
+.benefits-content {
+    text-align: center;
+    padding: 10px;
+}
+.benefits-container {
+    min-height: 350px;
+}
+.free-estimate {
+    position: fixed;
+    top: 80px;
+    left: 0px;
+    z-index: 1;
+}
+
+@-webkit-keyframes flow {
+	0% { left:-20px;opacity: 0;}
+	50% {left:100px;opacity: 0.3;}
+    100%{ left:180px;opacity: 0;}
+}
+@keyframes flow {
+	0% { left:-20px;opacity: 0;}
+	50% {left:100px;opacity: 0.3;}
+    100%{ left:180px;opacity: 0;}
+}
+
+.glow{ 
+    background: rgb(255,255,255); 
+    width:40px; 
+    height:100%; 
+    z-index:999; 
+    position:absolute;
+    -webkit-animation: flow 1.5s linear infinite;
+    -moz-animation: flow 1.5s linear infinite;
+    -webkit-transform: skew(20deg);
+	-moz-transform: skew(20deg);
+	-o-transform: skew(20deg);
+    background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 1%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(1%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,1) 100%); /* IE10+ */
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */ 
+    border-left:1px solid #fff;
+}
+
+.ribbon {
+  width: 270px;
+  height: 102px;
+  margin: 50px auto 0;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.ribbon .container {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 280px;
+  height: 100px;
+  overflow: hidden;
+  margin: 0 auto;
+  border-top: 1px solid #0056EA;
+  border-bottom: 1px solid #0056EA;
+}
+
+.ribbon .base {
+  height: 100px;
+  width: 200px;
+  background: #4ac9f7;
+  /* Old browsers */
+  
+  background: -moz-linear-gradient(left, #4ac9f7 1%, #0086ed 100%);
+  /* FF3.6-15 */
+  
+  background: -webkit-linear-gradient(left, #4ac9f7 1%, #0086ed 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  
+  background: linear-gradient(to right, #4ac9f7 1%, #0086ed 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#4ac9f7', endColorstr='#0086ed', GradientType=1);
+  /* IE6-9 */
+  
+  position: relative;
+  z-index: 2;
+}
+
+.ribbon .base:after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  width: 242px;
+  left: 0px;
+  height: 86px;
+  border-top: 2px dashed #0056EA;
+  border-bottom: 2px dashed #0056EA;
+}
+
+.ribbon .base:before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  width: 242px;
+  left: 2px;
+  height: 86px;
+  border-top: 2px dashed #0056EA;
+  border-bottom: 2px dashed #0056EA;
+}
+
+.ribbon .left_corner {
+  width: 100px;
+  height: 100px;
+  background: #0086ED;
+  position: absolute;
+  top: -49px;
+  right: 31px;
+  z-index: 1;
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.ribbon .right_corner {
+  width: 100px;
+  height: 100px;
+  background: #0086ED;
+  position: absolute;
+  bottom: -49px;
+  right: 31px;
+  z-index: 1;
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.ribbon .free-estimates {
+  font-size: 1.9rem;
+  font-weight: bold;
+  position: relative;
+  top: 36px;
+  left: 15px;
+  color: white;
+  text-shadow: 1px 1px 1px #333;
+}
+
+@media screen and (max-width: 767px){
+    .ribbon {
+        display: none;
+    }
 }

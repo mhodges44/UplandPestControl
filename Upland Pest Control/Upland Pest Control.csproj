@@ -202,10 +202,12 @@
     <Content Include="Content\Images\bug.png" />
     <Content Include="Content\Images\home.png" />
     <Content Include="Content\Images\Logo_150_150.png" />
+    <Content Include="Content\Images\Logo_512_512.png" />
     <Content Include="Content\Images\Logo_75_50.png" />
+    <Content Include="Content\Images\Logo_White_512_512.png" />
     <Content Include="Content\Images\pest-control-worker-28663642.jpg" />
     <Content Include="Content\Images\PestControlMan.png" />
-    <Content Include="Content\Images\refund.jpg" />
+    <Content Include="Content\Images\refund.png" />
     <Content Include="Content\ui-bootstrap-csp.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />

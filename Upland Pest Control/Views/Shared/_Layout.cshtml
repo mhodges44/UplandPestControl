@@ -10,6 +10,31 @@
     @Scripts.Render("~/bundles/angular")
 </head>
 <body ng-app="uplandPestControl" ng-controller="appCtrl">
+    <div class="free-estimate">
+        @*<div style="width:220px; height:100px; margin:5% auto; background-color: rgba(255,255,255,0.7)">
+            <br>
+            <div class="ribbon-wrapper">
+                <div class="glow">&nbsp;</div>
+                <div class="ribbon-front">
+                    Get Your Free Estimate!
+                </div>
+                <div class="ribbon-edge-topleft"></div>
+                <div class="ribbon-edge-topright"></div>
+                <div class="ribbon-edge-bottomleft"></div>
+                <div class="ribbon-edge-bottomright"></div>
+            </div>
+        </div>*@
+        <div class="ribbon" onclick="window.location='#Contact'">
+            <div class="container">
+                <div class="glow">&nbsp;</div>
+                <div class="base">
+                    <span class="free-estimates">Get A Free Estimate!</span>
+                </div>
+                <div class="left_corner"></div>
+                <div class="right_corner"></div>
+            </div>
+        </div>
+    </div>
     <div class="diamond">
         <div><img src="~/Content/Images/Logo_150_150.png" /></div>
     </div>
@@ -40,7 +65,7 @@
         <div style="height: 100%; width: 100%; background: rgba(0,0,0,0.5)">
         </div>
     </div>
-    <div style="width: 100%; z-index: 1; position: relative; top:0; background: inherit" class="body">
+    <div style="width: 100%; z-index: 2; position: relative; top:0; background: inherit" class="body">
         <div class="container body-content col-md-12">
             @RenderBody()
             <hr />
