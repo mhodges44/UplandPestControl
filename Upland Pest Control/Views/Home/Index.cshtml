@@ -2,45 +2,25 @@
     ViewBag.Title = "Home Page";
 }
 <div>
+    <div class="row" id="About">
+        @Html.Partial("_About")
+    </div>
+    <div class="row">
+        <div class="bg-img-2 divider-image"></div>
+    </div>
+    <div class="row" id="Services">
+        @Html.Partial("_Services")
+    </div>
+    <div class="row">
+        <div class="bg-img-1 divider-image"></div>
+    </div>
     <div class="row" id="Benefits">
         @Html.Partial("_Benefits")
     </div>
-    <div class="row" id="About" style="background-color: gainsboro;">
-        @Html.Partial("_About")
-    </div>
-    
-    <div class="row" id="Services">
-        <div class="col-md-4">
-            <h2>What is Upland Pest Control?</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-            <p><a class="btn btn-default" href="/home/about">Learn more &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-            <h2>Web Hosting</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-            <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-            <h2>Get more</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-        </div>
+    <div class="row">
+        <div class="bg-img-4 divider-image"></div>
     </div>
     <div class="row" id="FAQ">
-        <div class="col-md-4">
-            <h2>What is Upland Pest Control?</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-            <p><a class="btn btn-default" href="/home/about">Learn more &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-            <h2>Web Hosting</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-            <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-            <h2>Get more</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-        </div>
+        @Html.Partial("_FAQ")
     </div>
 </div>

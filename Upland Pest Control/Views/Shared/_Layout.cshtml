@@ -12,18 +12,18 @@
 <body ng-app="uplandPestControl" ng-controller="appCtrl">
     <div class="free-estimate">
         @*<div style="width:220px; height:100px; margin:5% auto; background-color: rgba(255,255,255,0.7)">
-            <br>
-            <div class="ribbon-wrapper">
-                <div class="glow">&nbsp;</div>
-                <div class="ribbon-front">
-                    Get Your Free Estimate!
+                <br>
+                <div class="ribbon-wrapper">
+                    <div class="glow">&nbsp;</div>
+                    <div class="ribbon-front">
+                        Get Your Free Estimate!
+                    </div>
+                    <div class="ribbon-edge-topleft"></div>
+                    <div class="ribbon-edge-topright"></div>
+                    <div class="ribbon-edge-bottomleft"></div>
+                    <div class="ribbon-edge-bottomright"></div>
                 </div>
-                <div class="ribbon-edge-topleft"></div>
-                <div class="ribbon-edge-topright"></div>
-                <div class="ribbon-edge-bottomleft"></div>
-                <div class="ribbon-edge-bottomright"></div>
-            </div>
-        </div>*@
+            </div>*@
         <div class="ribbon" onclick="window.location='#Contact'">
             <div class="container">
                 <div class="glow">&nbsp;</div>
@@ -51,9 +51,9 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="#Home">Home</a></li>
-                    <li><a href="#Benefits">Benefits</a></li>
                     <li><a href="#About">About</a></li>
                     <li><a href="#Services">Services</a></li>
+                    <li><a href="#Benefits">Benefits</a></li>
                     <li><a href="#FAQ">FAQ</a></li>
                     <li><a href="#Contact">Contact</a></li>
                 </ul>
@@ -79,37 +79,7 @@
     @Scripts.Render("~/bundles/siteJS")
     @RenderSection("scripts", required: false)
     <script>
-        $(function () {
-            var offset = $(".navbar").offset().top;
-            function stickyNav() {
-                if ($(window).width() > 1205 && $(window).scrollTop() > offset) {
-                    $(".navbar").addClass("sticky");
-                }
-                else if ($(window).width() <= 1205) {
-                    $(".navbar").addClass("sticky");
-                }
-                else {
-                    $(".navbar").removeClass("sticky");
-                }
-            }
-            stickyNav();
-            $(window).on("scroll resize", function () {
-                stickyNav();
-            });
-            var inputs = function (element) {
-                if (element.val() != "") {
-                    element.parent().addClass("show-label");
-                } else {
-                    element.parent().removeClass("show-label");
-                }
-            }
-            $.each($(".inline-label-input"), function () {
-                inputs($(this));
-            });
-            $(".inline-label-input").on("input propertychange change", function () {
-                inputs($(this));
-            });
-        });
+        
     </script>
 </body>
 </html>
