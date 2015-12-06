@@ -1,0 +1,11 @@
+﻿.glow {
+    display:none !important;
+}
+
+.inline-label {
+  display: block !important;
+}
+
+.inline-label-input {
+  line-height: 56px !important;
+}

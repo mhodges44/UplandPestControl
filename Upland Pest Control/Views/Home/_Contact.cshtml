@@ -14,15 +14,15 @@
                 </div>
                 <div class="inline-label-container">
                     <label class="inline-label">Email Address</label>
-                    <input type="text" placeholder="Email Address" class="inline-label-input" ng-model="customerEmail">
+                    <input type="email" placeholder="Email Address" class="inline-label-input" ng-model="customerEmail">
                 </div>
                 <div class="inline-label-container">
                     <label class="inline-label">Phone Number</label>
-                    <input type="text" placeholder="Phone Number" class="inline-label-input" ng-model="customerPhone">
+                    <input type="tel" placeholder="Phone Number" class="inline-label-input" ng-model="customerPhone">
                 </div>
             </div>
             <div style="float: left; margin-bottom: 20px;">
-                <textarea placeholder="Tell us about your situation..." style="min-height: 150px; width: 400px; max-width: calc(100vw - 40px); margin-right: 10px;" ng-model="additionalNotes"></textarea>
+                <textarea placeholder="Tell us about your situation..." style="min-height: 165px; width: 400px; max-width: calc(100vw - 40px); margin-right: 10px;" ng-model="additionalNotes"></textarea>
                 <br />
                 <button ng-click="sendEmail()">Send</button>
             </div>

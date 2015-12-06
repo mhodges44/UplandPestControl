@@ -24,8 +24,10 @@ namespace Upland_Pest_Control.Controllers
                 mailMessage.From = new MailAddress(customerEmail);
                 mailMessage.Subject = "Upland Pest Control Customer Inquiry";
                 mailMessage.Body = additionalNotes;
-                SmtpClient smtpClient = new SmtpClient("mail.uplandpest.com");
-                //smtpClient.Credentials = new NetworkCredential("Administrator", "UplandP3stC0ntrol");
+                SmtpClient smtpClient = new SmtpClient("mail.uplandpestcontrol.com");
+                smtpClient.UseDefaultCredentials = false;
+                //SmtpClient smtpClient = new SmtpClient("m07.internetmailserver.net");
+                smtpClient.Credentials = new NetworkCredential("postmaster@uplandpestcontrol.com", "Myb0ynuggett!");
                 smtpClient.Send(mailMessage);
                 result = "Success";
             }

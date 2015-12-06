@@ -1,6 +1,6 @@
 ﻿var app = angular.module("uplandPestControl", ["ngRoute"]);
 
-app.controller("appCtrl", function ($scope, $http) {
+app.controller("appCtrl", ['$scope', '$http',  function ($scope, $http) {
     var imgNum = Math.floor(((Math.random() * 100) % 4) + 1);
     $scope.backgroundImage = "bg-img-" + imgNum;
     $scope.customerName = "";
@@ -26,9 +26,14 @@ app.controller("appCtrl", function ($scope, $http) {
             }
         );
     }
-});
+}]);
 
 $(function () {
+    $(".navbar a").on("click", function (event) {
+        event.preventDefault();
+        var top = $("" + $(this).attr("href")).offset().top - 40;
+        $("html, body").animate({ scrollTop: top }, 800);
+    });
     var offset = $(".navbar").offset().top;
     function stickyNav() {
         if ($(window).width() > 1205 && $(window).scrollTop() > offset) {

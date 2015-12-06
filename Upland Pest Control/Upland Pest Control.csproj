@@ -184,6 +184,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\ie-9.css" />
     <Content Include="Content\Images\100guarantee.png" />
     <Content Include="Content\Images\10PercentDiscount.png" />
     <Content Include="Content\Images\1447842434_Brain-Games-grey.png" />
@@ -200,6 +201,8 @@
     <Content Include="Content\Images\bg-img-2.jpg" />
     <Content Include="Content\Images\bg-img-4.jpg" />
     <Content Include="Content\Images\bug.png" />
+    <Content Include="Content\Images\Dave.jpg" />
+    <Content Include="Content\Images\Dave2.jpg" />
     <Content Include="Content\Images\home.png" />
     <Content Include="Content\Images\Logo_150_150.png" />
     <Content Include="Content\Images\Logo_512_512.png" />
@@ -208,6 +211,7 @@
     <Content Include="Content\Images\pest-control-worker-28663642.jpg" />
     <Content Include="Content\Images\PestControlMan.png" />
     <Content Include="Content\Images\refund.png" />
+    <Content Include="Content\Images\Service_Locations.JPG" />
     <Content Include="Content\ui-bootstrap-csp.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -230,6 +234,9 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\FTP Local.pubxml" />
+    <None Include="Properties\PublishProfiles\FTP Package.pubxml" />
+    <None Include="Properties\PublishProfiles\WinHost.pubxml" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />

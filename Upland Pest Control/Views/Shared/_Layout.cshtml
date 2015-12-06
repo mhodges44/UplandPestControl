@@ -8,6 +8,10 @@
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/angular")
+    <!--[if IE 9]>
+        <link rel="stylesheet" type="text/css" href="/Content/ie-9.css">
+    <![endif]-->
+
 </head>
 <body ng-app="uplandPestControl" ng-controller="appCtrl">
     <div class="free-estimate">
@@ -78,8 +82,5 @@
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/siteJS")
     @RenderSection("scripts", required: false)
-    <script>
-        
-    </script>
 </body>
 </html>

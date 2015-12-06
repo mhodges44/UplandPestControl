@@ -182,11 +182,11 @@ textarea {
   height: 1px;
   position: absolute;
   left: 0px;
-  top: 12px;
+  top: 14px;
 }
 
 .inline-label-input {
-  height: 40px;
+  height: 50px;
   border: 1px solid #333;
   border-radius: 3px;
   padding-left: 2px;
@@ -194,7 +194,7 @@ textarea {
 }
 
 .show-label .inline-label-input {
-  line-height: 55px;
+  line-height: 56px;
 }
 
 .show-label label {
@@ -248,7 +248,8 @@ form button:hover {
 .about-owner-photo {
     float: left;
     width: 100%;
-    max-width: 400px;
+    margin-bottom: 40px;
+    max-width: 600px;
 
 }
 .about-description {
@@ -304,9 +305,11 @@ form button:hover {
     position:absolute;
     -webkit-animation: flow 1.5s linear infinite;
     -moz-animation: flow 1.5s linear infinite;
+    animation: flow 1.5s linear infinite;
     -webkit-transform: skew(20deg);
 	-moz-transform: skew(20deg);
 	-o-transform: skew(20deg);
+    transform: skew(20deg);
     background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 1%, rgba(255,255,255,1) 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(1%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
@@ -476,7 +479,7 @@ form button:hover {
   transition: max-height 0.4s ease;
 }
 .faq-container input[type=checkbox]:checked ~ h2 ~ p {
-  max-height: 80px;
+  max-height: 900px;
 }
 
 .heading-primary {
