@@ -1,18 +1,14 @@
 ﻿var app = angular.module("uplandPestControl", ["ngRoute"]);
 
 app.controller("appCtrl", ['$scope', '$http',  function ($scope, $http) {
-    var imgNum = Math.floor(((Math.random() * 100) % 4) + 1);
-    $scope.backgroundImage = "bg-img-" + imgNum;
+    $scope.sending = false;
+    $scope.sent = false;
     $scope.customerName = "";
     $scope.customerEmail = "";
     $scope.customerPhone = "";
     $scope.additionalNotes = "";
-    /* Code to programmatically change the background. Not useful at the moment,
-    but may be useful down the road. */
-    //$scope.changeBackgroundImage = function (imgNumber) {
-    //    $scope.backgroundImage = "bg-img-" + imgNumber;
-    //}
     $scope.sendEmail = function () {
+        $scope.sending = true;
         $http.post("/Home/EmailCustomerInfo",
             {
                 customerName: $scope.customerName,
@@ -20,9 +16,19 @@ app.controller("appCtrl", ['$scope', '$http',  function ($scope, $http) {
                 customerPhone: $scope.customerPhone,
                 additionalNotes: $scope.additionalNotes
             }).then(function successCallback(response) {
-                console.log(response.data);
+                if (response.data == "Success") {
+                    $scope.sent = true;
+                    var timeout = setTimeout(function () {
+                        window.location.reload();
+                    }, 2000);
+                }
+                else {
+                    alert(response.data);
+                }
+                $scope.sending = false;
             }, function failureCallback(response) {
-                console.log(response.data);
+                alert(response.data);
+                $scope.sending = false;
             }
         );
     }
@@ -68,12 +74,12 @@ $(function () {
         Accordion Widget - http://codepen.io/chriswrightdesign/pen/cmanI
     **/
     var d = document,
-accordionToggles = d.querySelectorAll('.js-accordionTrigger'),
-setAria,
-setAccordionAria,
-switchAccordion,
-touchSupported = ('ontouchstart' in window),
-pointerSupported = ('pointerdown' in window);
+    accordionToggles = d.querySelectorAll('.js-accordionTrigger'),
+    setAria,
+    setAccordionAria,
+    switchAccordion,
+    touchSupported = ('ontouchstart' in window),
+    pointerSupported = ('pointerdown' in window);
 
     skipClickDelay = function (e) {
         e.preventDefault();

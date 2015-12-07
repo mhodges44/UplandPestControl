@@ -74,23 +74,6 @@
         padding-left: 20px;
         padding-right: 20px;
     }
-
-    /*.bg-img-1 {
-        background-image: url(Images/bg-img-1.jpg);
-        background-position-y: 0;
-    }
-
-    .bg-img-2 {
-        background-image: url(Images/bg-img-2.jpg);
-    }
-
-    .bg-img-3 {
-        background-image: url(Images/bg-img-3.jpg);
-    }
-
-    .bg-img-4 {
-        background-image: url(Images/bg-img-4.jpg);
-    }*/
 }
 /* Set padding to keep content from hitting the edges */
 .body-content {
@@ -492,14 +475,6 @@ form button:hover {
 .accordion-list {
   border: 1px solid #ddd;
 }
-/*.accordion dl:after,
-.accordion-list:after {
-  content: "";
-  display: block;
-  height: 1em;
-  width: 100%;
-  background-color: #2ba659;
-}*/
 
 .accordion dd,
 .accordion__panel {
@@ -514,6 +489,8 @@ form button:hover {
 
 .accordion {
   position: relative;
+  width: 95%;
+  margin: 0 auto;
   background-color: #eee;
 }
 
@@ -563,9 +540,9 @@ form button:hover {
 .accordionItem {
   height: auto;
   overflow: hidden;
-  max-height: 70em;
-  -webkit-transition: max-height 1s;
-          transition: max-height 1s;
+  max-height: 90em;
+  -webkit-transition: max-height 1.2s;
+          transition: max-height 1.2s;
 }
 
 .accordionItem.is-collapsed {
@@ -645,4 +622,21 @@ form button:hover {
     background-position: center; 
     height: calc(100vh); 
     background-repeat: no-repeat;
+}
+
+form input.ng-dirty.ng-invalid {
+    border: 1px solid red;
+    background-color: pink;
+}
+
+span.angular-error-text {
+    color: red;
+}
+
+button:disabled {
+    background: #ddd !important;
+}
+button:disabled:hover {
+    background: #ddd !important;
+    color: whitesmoke !important;
 }

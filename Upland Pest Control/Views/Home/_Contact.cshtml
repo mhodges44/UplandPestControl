@@ -10,21 +10,42 @@
             <div style="float: left; margin-right: 50px; padding-bottom: 20px;">
                 <div class="inline-label-container">
                     <label class="inline-label">Your Name</label>
-                    <input type="text" placeholder="Your Name" class="inline-label-input" ng-model="customerName">
+                    <input name="customerName" type="text" placeholder="Your Name" class="inline-label-input" ng-model="customerName" ng-required="true">
+                    <span ng-if="ContactForm.customerName.$dirty && ContactForm.customerName.$invalid">
+                        <br />
+                        <span ng-show="ContactForm.customerName.$error.required" class="angular-error-text">Name is required!</span>
+                    </span>
                 </div>
                 <div class="inline-label-container">
                     <label class="inline-label">Email Address</label>
-                    <input type="email" placeholder="Email Address" class="inline-label-input" ng-model="customerEmail">
+                    <input name="customerEmail" type="email" placeholder="Email Address" class="inline-label-input" ng-model="customerEmail" ng-required="true">
+                    <span ng-if="ContactForm.customerEmail.$dirty && ContactForm.customerEmail.$invalid">
+                        <br />
+                        <span ng-show="ContactForm.customerEmail.$error.email" class="angular-error-text">Invalid email format!</span>
+                        <span ng-show="ContactForm.customerEmail.$error.required" class="angular-error-text">Email address required!</span>
+                    </span>
                 </div>
                 <div class="inline-label-container">
                     <label class="inline-label">Phone Number</label>
-                    <input type="tel" placeholder="Phone Number" class="inline-label-input" ng-model="customerPhone">
+                    <input name="customerPhone" type="tel" placeholder="Phone Number" class="inline-label-input" ng-model="customerPhone" 
+                           ng-pattern="/^[0-9]{3}-?[0-9]{3}-?[0-9]{4}$/" ng-required="true">
+                    <span ng-if="ContactForm.customerPhone.$dirty && ContactForm.customerPhone.$invalid">
+                        <br />
+                        <span ng-show="ContactForm.customerPhone.$error.pattern" class="angular-error-text">Invalid phone format - use 10 digit phone number</span>
+                        <span ng-show="ContactForm.customerPhone.$error.required" class="angular-error-text">Phone number is required!</span>
+                    </span>
                 </div>
             </div>
             <div style="float: left; margin-bottom: 20px;">
-                <textarea placeholder="Tell us about your situation..." style="min-height: 165px; width: 400px; max-width: calc(100vw - 40px); margin-right: 10px;" ng-model="additionalNotes"></textarea>
+                <textarea name="additionalNotes" placeholder="Tell us about your situation..." style="min-height: 165px; width: 400px; max-width: calc(100vw - 40px); margin-right: 10px;" ng-model="additionalNotes" ng-required="true"></textarea>
+                <span ng-if="ContactForm.additionalNotes.$dirty && ContactForm.additionalNotes.$invalid">
+                    <br />
+                    <span ng-show="ContactForm.additionalNotes.$error.required" class="angular-error-text">Description is required!</span>
+                </span>
                 <br />
-                <button ng-click="sendEmail()">Send</button>
+                <button ng-hide="sending" ng-click="ContactForm.$valid && sendEmail()" ng-disabled="ContactForm.$invalid">Send</button>
+                <button ng-show="sending" ng-disabled="true">Sending...</button>
+                <span ng-show="sent" style="color: green"><i class="fa fa-check"></i>Sent!</span>
             </div>
         </form>
     </div>
